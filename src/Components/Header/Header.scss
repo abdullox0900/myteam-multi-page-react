@@ -1,0 +1,99 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.header {
+    padding: 73px 0px;
+    background: $midnightGreen;
+
+    &__logo-img {
+        width: 160px;
+        height: 40px;
+    }
+
+    &__content {
+        @include flexStyle(center, space-between, none)
+    }
+
+    &__box {
+        @include flexStyle(center, space-between, none)
+    }
+
+    &__list {
+        margin-left: 80px;
+        @include flexStyle(center, space-between, none)
+    }
+
+    &__item+&__item {
+        margin-left: 40px;
+    }
+
+    &__link {
+        @include siteText(18px, 28px)
+    }
+
+    &__menu-btn {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        background: url("../../Assets/Icon/burger.svg")no-repeat;
+    }
+
+    &__btn {
+        display: inline-block;
+        @include siteButton()
+    }
+
+    &__btn:hover {
+        color: $sacramentoStateGreen;
+        background-color: $white;
+    }
+
+    &__btn:active {
+        opacity: 0.6;
+    }
+}
+
+// Responsiv Tablet
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 64px 0px;
+
+        &__list {
+            margin-left: 48px;
+        }
+
+        &__logo-img {
+            width: 128px;
+            height: 32px;
+        }
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__menu-btn {
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .header {
+        padding: 48px 0px;
+        &__menu-btn {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

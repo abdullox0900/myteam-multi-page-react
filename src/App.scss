@@ -1,0 +1,81 @@
+/* ======FONTS====== */
+@font-face {
+    font-family: 'Livvic';
+    src: url('../src/Assets/Fonts/Livvic-Bold.woff2') format('woff2'),
+        url('../src/Assets/Fonts/Livvic-Bold.woff') format('woff'),
+        url('../src/Assets/Fonts/Livvic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('../src/Assets/Fonts//Livvic-Regular.woff2') format('woff2'),
+        url('../src/Assets/Fonts/Livvic-Regular.woff') format('woff'),
+        url('../src/Assets/Fonts/Livvic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('../src/Assets/Fonts/Livvic-SemiBold.woff2') format('woff2'),
+        url('../src/Assets/Fonts/Livvic-SemiBold.woff') format('woff'),
+        url('../src/Assets/Fonts/Livvic-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('../src/Assets/Fonts/Livvic-BoldItalic.woff2') format('woff2'),
+        url('../src/Assets/Fonts/Livvic-BoldItalic.woff') format('woff'),
+        url('../src/Assets/Fonts/Livvic-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Livvic';
+    src: url('../src/Assets/Fonts/Livvic-MediumItalic.woff2') format('woff2'),
+        url('../src/Assets/Fonts/Livvic-MediumItalic.woff') format('woff'),
+        url('../src/Assets/Fonts/Livvic-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ======GENERAL====== */
+
+html {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Livvic';
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

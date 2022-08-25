@@ -1,0 +1,102 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.hero {
+    position: relative;
+    padding: 50px 0px 250px 0px;
+    background-color: $midnightGreen;
+
+    &__content {
+        @include flexStyle(flex-end, space-between, none);
+    }
+
+    &__title {
+        max-width: 530px;
+        @include siteTitle(100px, 100px, $white);
+
+        span {
+            color: $lightCoral;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        max-width: 445px;
+        margin-top: 79px;
+        @include siteDesc(18px, 28px, $white);
+    }
+
+    &__desc::before {
+        position: absolute;
+        top: -79px;
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: $raptureBlue;
+    }
+}
+
+.hero::before {
+    @include beforAfter(200px, 200px);
+    background: url("../../Assets/Icon/disk-left.svg")no-repeat
+}
+
+.hero::after {
+    @include beforAfter(358px, 200px);
+    right: 20%;
+    bottom: -100px;
+    background: url("../../Assets/Icon/disk-bottom.svg")no-repeat
+}
+
+@media only screen and (max-width: 1280px) {
+    .hero::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .hero {
+        &__content {
+            @include flexStyle(center, none, column);
+            text-align: center;
+        }
+
+        &__title {
+            max-width: 345px;
+            @include siteTitle(64px, 56px, $white);
+            margin-bottom: 24px;
+        }
+
+        &__desc {
+            max-width: 457px;
+            @include siteDesc(15px, 28px, $white);
+        }
+
+        &__desc::before {
+            display: none;
+        }
+    }
+
+    .hero::after {
+        right: 25%;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .hero {
+        padding: 38px 0px 200px 0px;
+        &__title {
+            max-width: 345px;
+            @include siteTitle(40px, 40px, $white);
+            margin-bottom: 18px;
+        }
+
+        &__desc {
+            max-width: 327px;
+        }
+    }
+
+    .hero::after {
+        right: 1%;
+    }
+}

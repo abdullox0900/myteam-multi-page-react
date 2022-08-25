@@ -1,0 +1,49 @@
+@import "../../Assets/Scss/colors.scss";
+
+@mixin siteButton {
+    padding: 10px 33px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 24px;
+    transition: ease 0.5s;
+}
+
+@mixin flexStyle($ai, $jc, $fd) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
+@mixin siteTitle($fs, $lh, $cl) {
+    margin: 0;
+    font-weight: 700;
+    font-size: $fs;
+    line-height: $lh;
+    color: $cl;
+}
+
+@mixin siteDesc($fs, $lh, $cl) {
+    margin: 0;
+    font-weight: 600;
+    font-size: $fs;
+    line-height: $lh;
+    color: $cl;
+}
+
+@mixin siteText($fs, $lh) {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $white;
+}
+
+@mixin beforAfter($wd, $hg) {
+    position: absolute;
+    content: "";
+    width: $wd;
+    height: $hg;
+}
