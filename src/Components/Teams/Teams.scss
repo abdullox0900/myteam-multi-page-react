@@ -1,0 +1,156 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.teams {
+    position: relative;
+    padding: 140px 0px;
+    background-color: $sacramentoStateGreen;
+
+    &__box {
+        position: relative;
+        @include flexStyle(start, space-between, none);
+    }
+
+    &__title {
+        max-width: 445px;
+        @include siteTitle(48px, 48px, $white);
+    }
+
+    &__title::before {
+        top: -54px;
+        @include beforAfter(50px, 4px);
+        background-color: ($lightCoral);
+    }
+
+    &__item {
+        max-width: 540px;
+        @include flexStyle(center, space-between, none);
+    }
+
+    &__item+&__item {
+        margin-top: 32px;
+    }
+
+    &__item-title {
+        @include siteTitle(18px, 28px, $lightCoral);
+        margin-bottom: 16px;
+    }
+
+    &__item-desc {
+        @include siteDesc(15px, 25px, $white)
+    }
+
+    &__icon {
+        margin-right: 23px;
+    }
+}
+
+.teams::after {
+    @include beforAfter(100px, 244px);
+    right: 0px;
+    bottom: 10px;
+    background: url("../../Assets/Icon/teams-right.svg")no-repeat;
+}
+
+@media only screen and (max-width: 1200px) {
+    .teams::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .teams {
+        padding: 120px 0px;
+
+        &__box {
+            max-width: 800px;
+            margin: 0 auto;
+            @include flexStyle(start, center, column);
+        }
+
+        &__title {
+            max-width: 650px;
+            margin-bottom: 63px;
+        }
+    }
+
+    .teams::after {
+        display: flex;
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .teams {
+        &__box {
+            max-width: 700px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .teams {
+        padding: 100px 0px;
+
+        &__box {
+            max-width: auto;
+        }
+
+        &__title {
+            max-width: 450px;
+            @include siteTitle(32px, 32px, $white);
+            margin-bottom: 64px;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .teams {
+
+        &__title {
+            max-width: 300px;
+        }
+
+        &__icon {
+            margin-right: 0px;
+            margin-bottom: 16px;
+        }
+
+        &__item {
+            @include flexStyle(center, none, column);
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .teams {
+
+        &__item {
+            @include flexStyle(center, none, column);
+            text-align: center;
+        }
+
+        &__item + &__item {
+            margin-top: 48px;
+        }
+
+        &__title {
+            max-width: 240px;
+            margin-bottom: 56px;
+        }
+
+        &__title::before {
+            top: -32px;
+        }
+
+        &__icon {
+            margin-right: 0px;
+            margin-bottom: 16px;
+        }
+
+        &__item-title {
+            margin-bottom: 8px;
+        }
+    }  
+}
