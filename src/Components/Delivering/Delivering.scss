@@ -1,0 +1,115 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.delivering {
+    position: relative;
+    padding: 140px 0px;
+    background-color: $deepJungleGreen;
+
+    &__title {
+        max-width: 932px;
+        text-align: center;
+        @include siteTitle(48px, 48px, $white);
+        margin: 0 auto;
+        margin-bottom: 56px;
+
+        span {
+            color: $raptureBlue;
+        }
+    }
+
+    &__list {
+        @include flexStyle(center, center, none)
+    }
+
+    &__item {
+        position: relative;
+        max-width: 350px;
+        text-align: center;
+        @include flexStyle(center, none, column);
+    }
+
+    &__item::before {
+        top: -30px;
+        @include beforAfter(67px, 56px);
+        background: url("../../Assets/Icon/quote\(1\).svg")no-repeat;
+    }
+
+    &__item+&__item {
+        margin-left: 30px;
+    }
+
+    &__item-desc {
+        max-width: 350px;
+        @include siteDesc(15px, 25px, $white);
+        margin-bottom: 24px;
+        z-index: 1;
+    }
+
+    &__user-name {
+        @include siteTitle(18px, 28px, $raptureBlue);
+        margin-bottom: 2px;
+    }
+
+    &__blockquote {
+        margin: 0;
+        color: $white;
+        font-style: italic;
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 32px;
+    }
+
+    &__user-img {
+        border-radius: 50%;
+    }
+}
+
+.delivering::before {
+    @include beforAfter(147px, 100px);
+    top: 0px;
+    left: 0px;
+    background: url("../../Assets/Icon/deliver-right-bg.svg") no-repeat
+}
+
+.delivering::after {
+    @include beforAfter(200px, 100px);
+    bottom: 0px;
+    right: 0px;
+    background: url("../../Assets/Icon/deliver-bottom.svg") no-repeat
+}
+
+
+@media only screen and (max-width: 768px) {
+    .delivering {
+        padding: 100px 0px;
+
+        &__title {
+            @include siteTitle(32px, 32px, $white);
+            margin-bottom: 48px;
+        }
+
+        &__list {
+            @include flexStyle(center, none, column-reverse)
+        }
+
+        &__item {
+            max-width: 753px;
+        }
+
+        &__item + &__item {
+            margin-left: 0px;
+            margin-bottom: 58px;
+        }
+
+        &__item-desc {
+            max-width: 573px;
+        }
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .delivering {
+        padding: 148px 0px;
+    }
+}

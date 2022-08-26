@@ -1,0 +1,163 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.footer {
+    padding: 48px 0px;
+    background-color: $darkGreen;
+
+    &__content {
+        @include flexStyle(center, space-between, none);
+    }
+
+    &__left {
+        @include flexStyle(center, none, none)
+    }
+
+    &__logo-img {
+        width: 160px;
+        height: 40px;
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        @include flexStyle(center, none, none)
+    }
+
+    &__item+&__item {
+        margin-left: 40px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 18px;
+        color: $white;
+        line-height: 28px;
+    }
+
+    &__info {
+        margin: 0;
+        margin-left: 125px;
+        max-width: 170px;
+        font-weight: 600;
+        color: $white;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    &__right {
+        @include flexStyle(flex-end, none, column)
+    }
+
+    &__soch-list {
+        @include flexStyle(center, none, none);
+        margin-bottom: 54px;
+    }
+
+    &__soch-item + &__soch-item {
+        margin-left: 16px;
+    }
+
+    &__soch-link {
+        font-size: 24px;
+        color: $white;
+        transition: ease 0.5s;
+    }
+
+    &__soch-link:hover {
+        color: $raptureBlue;
+    }
+
+    &__soch-link:active {
+        opacity: 0.6;
+    }
+
+    &__in {
+        @include siteDesc(15px, 26px, $white);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        position: relative;
+        padding: 56px 0px 100px 0px;
+        transition: all ease 0.5s;
+
+        &__logo-img {
+            width: 95px;
+            height: 24px;
+            margin-bottom: 53px;
+        }
+
+        &__info {
+            position: absolute;
+            right: 20px;
+            text-align: right;
+        }
+
+        &__soch-list {
+            position: absolute;
+            top: 75%;
+            left: 20px;
+        }
+
+        &__in {
+            position: relative;
+            top: 100px;
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .footer {
+        padding: 66px 0px 250px 0px;
+
+        &__content {
+            @include flexStyle(center, none, column);
+        }
+
+        &__wrap {
+            @include flexStyle(center, none, column);
+            margin-bottom: 24px;
+        }
+
+        &__logo-img {
+            margin-bottom: 24px;
+        }
+
+        &__info {
+            position: absolute;
+            top: 170px;
+            left: 30%;
+            text-align: center;
+            margin-left: 0px;
+        }
+
+        &__soch-list {
+            top: 70%;
+            left: 38%;
+            margin-bottom: 0px;
+        }
+
+        &__in {
+            position: absolute;
+            left: 20%;
+            top: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .footer {
+        &__info {
+            left: 24%;
+        }
+
+        &__soch-list {
+            left: 36%;
+        }
+
+        &__in {
+            left: 11%;
+        }
+    }
+}

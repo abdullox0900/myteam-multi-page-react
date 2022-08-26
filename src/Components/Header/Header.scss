@@ -42,7 +42,7 @@
 
     &__btn {
         display: inline-block;
-        @include siteButton()
+        @include siteButton($white, $white);
     }
 
     &__btn:hover {

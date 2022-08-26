@@ -1,0 +1,72 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.ready {
+    position: relative;
+    padding: 76px 0px;
+    background-color: $lightCoral;
+
+    &__container {
+        max-width: 917px;
+        padding: 0px 20px;
+        margin: 0 auto;
+    }
+
+    &__box {
+        @include flexStyle(center, space-between, none)
+    }
+
+    &__title {
+        @include siteTitle(32px, 32px, $sacramentoStateGreen);
+        z-index: 10;
+    }
+
+    &__btn {
+        @include siteButton($sacramentoStateGreen, $sacramentoStateGreen);
+        z-index: 10;
+    }
+
+    &__btn:hover {
+        color: $white;
+        background-color: $sacramentoStateGreen;
+    }
+
+    &__btn:active {
+        opacity: 0.6;
+    }
+}
+
+.ready::before {
+    @include beforAfter(200px, 123px);
+    left: 0px;
+    bottom: 0px;
+    background: url("../../Assets/Icon/ready-bottom.svg")no-repeat;
+}
+
+// Responsiv Tablet
+
+@media only screen and (max-width: 768px) {
+    .ready {
+        &__container {
+            max-width: 573px;
+        }
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .ready {
+        &__container {
+            max-width: 573px;
+        }
+
+        &__box {
+            @include flexStyle(center, none, column)
+        }
+
+        &__title {
+            max-width: 327px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+}

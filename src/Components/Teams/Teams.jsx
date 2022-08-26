@@ -9,6 +9,25 @@ import TwoImg from "../../Assets/Icon/icon-gear.svg";
 import ThreeImg from "../../Assets/Icon/icon-stat.svg";
 
 function Teams() {
+
+    const teamNewArr = [
+        {
+            img: OneImg,
+            title: "Experienced Individuals",
+            desc: "Our network is made up of highly experienced professionals who are passionate about what they do.",
+        },
+        {
+            img: TwoImg,
+            title: "Easy to Implement",
+            desc: "Our processes have been refined over years of implementation meaning our teams always deliver.",
+        },
+        {
+            img: ThreeImg,
+            title: "Enhanced Productivity",
+            desc: "Our customized platform with in-built analytics helps you manage your distributed teams.",
+        },
+    ]
+
     return (
         <>
             <section className="teams">
@@ -17,40 +36,22 @@ function Teams() {
                         <h2 className="teams__title">Build & manage distributed teams like no one else.</h2>
 
                         <ul className="teams__list">
-                            <li className="teams__item">
-                                <img className="teams__icon" src={OneImg} alt="ils-icon" width={72} height={72} />
+                            {
+                                teamNewArr.map((data) => {
+                                    return (
+                                        <>
+                                            <li className="teams__item">
+                                                <img className="teams__icon" src={data.img} alt="ils-icon" width={72} height={72} />
 
-                                <div className="team__wrap">
-                                    <h5 className="teams__item-title">Experienced Individuals</h5>
-                                    <p className="teams__item-desc">
-                                        Our network is made up of highly
-                                        experienced professionals who are
-                                        passionate about what they do.
-                                    </p>
-                                </div>
-                            </li>
-                            <li className="teams__item">
-                                <img className="teams__icon" src={TwoImg} alt="ils-icon" width={72} height={72} />
-
-                                <div className="team__wrap">
-                                    <h5 className="teams__item-title">Easy to Implement</h5>
-                                    <p className="teams__item-desc">
-                                        Our processes have been refined over years
-                                        of implementation meaning our teams always deliver.
-                                    </p>
-                                </div>
-                            </li>
-                            <li className="teams__item">
-                                <img className="teams__icon" src={ThreeImg} alt="ils-icon" width={72} height={72} />
-
-                                <div className="team__wrap">
-                                    <h5 className="teams__item-title">Enhanced Productivity</h5>
-                                    <p className="teams__item-desc">
-                                        Our customized platform with in-built
-                                        analytics helps you manage your distributed teams.
-                                    </p>
-                                </div>
-                            </li>
+                                                <div className="team__wrap">
+                                                    <h5 className="teams__item-title">{data.title}</h5>
+                                                    <p className="teams__item-desc">{data.desc}</p>
+                                                </div>
+                                            </li>
+                                        </>
+                                    )
+                                })
+                            }
                         </ul>
                     </div>
                 </Container>
