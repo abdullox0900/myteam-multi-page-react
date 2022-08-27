@@ -14,7 +14,7 @@ function AboutCon() {
                     <div className="about-con__box">
                         <h1 className="about-con__title">About</h1>
 
-                        <p className="about-con__desc" data-aos="fade-left"
+                        <p className="about-con__desc" data-aos="zoom-in-down"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
                             We help companies build dynamic teams made up of top global talent. Using our network of

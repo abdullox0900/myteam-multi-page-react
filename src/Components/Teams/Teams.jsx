@@ -43,7 +43,7 @@ function Teams() {
                                             <li className="teams__item" >
                                                 <img data-aos="zoom-in" className="teams__icon" src={data.img} alt="ils-icon" width={72} height={72} />
 
-                                                <div className="team__wrap" data-aos="fade-left"
+                                                <div className="team__wrap" data-aos="zoom-in-up"
                                                     data-aos-offset="300"
                                                     data-aos-easing="ease-in-sine">
                                                     <h5 className="teams__item-title">{data.title}</h5>

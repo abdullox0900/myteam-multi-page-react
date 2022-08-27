@@ -1,0 +1,214 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.contact {
+    position: relative;
+    padding: 58px 0px 120px 0px;
+    background-color: $midnightGreen;
+
+    &__box {
+        @include flexStyle(start, space-between, none);
+    }
+
+    &__title {
+        @include siteTitle(64px, 100px, $white);
+        margin-bottom: 16px;
+    }
+
+    &__subtitle {
+        @include siteDesc(32px, 48px, $lightCoral);
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        @include flexStyle(center, none, none);
+    }
+
+    &__item+&__item {
+        margin-top: 8px;
+    }
+
+    &__text {
+        @include siteDesc(18px, 28px, $white);
+        margin-left: 23px;
+    }
+
+    &__form {
+        width: 542px;
+        @include flexStyle(start, none, column);
+    }
+
+    &__input {
+        padding: 0px 81px 17px 14px;
+        width: 100%;
+        border: none;
+        color: $white;
+        font-weight: 600;
+        font-size: 18px;
+        outline: none;
+        border-bottom: 1px solid $white;
+        background-color: transparent;
+        transition: ease 0.5s;
+    }
+
+    &__input:focus {
+        border-bottom: 1px solid $raptureBlue;
+    }
+
+    &__input::placeholder {
+        @include siteDesc(15px, 25px, $white);
+        opacity: 0.6;
+    }
+
+    &__input+&__input {
+        margin-top: 24px;
+    }
+
+    &__input:nth-child(4) {
+        margin-bottom: 24px;
+    }
+
+    &__textarea {
+        padding: 0px 81px 17px 14px;
+        margin-bottom: 24px;
+        outline: none;
+        width: 100%;
+        height: 84px;
+        color: $white;
+        font-weight: 600;
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+    }
+
+    &__textarea::placeholder {
+        @include siteDesc(15px, 25px, $white);
+        opacity: 0.6;
+    }
+
+    &__textarea:focus {
+        border-bottom: 1px solid $raptureBlue;
+    }
+
+    &__btn {
+        @include siteButton($deepJungleGreen, none);
+        border: none;
+        cursor: pointer;
+        background-color: $white;
+    }
+
+    &__btn:hover {
+        background-color: $raptureBlue;
+    }
+
+    &__btn:active {
+        opacity: 0.6;
+    }
+}
+
+.contact::before {
+    @include beforAfter(100px, 200px);
+    top: 50px;
+    left: 0px;
+    background: url("../../Assets/Icon/disk-direk-1.svg") no-repeat
+}
+
+.contact::after {
+    @include beforAfter(100px, 200px);
+    bottom: 0px;
+    right: 0px;
+    background: url("../../Assets/Icon/contact-right.svg") no-repeat
+}
+
+@media only screen and (max-width: 1055px) {
+    .contact {
+        &__box {
+            @include flexStyle(center, center, column);
+            text-align: center;
+        }
+
+        &-left {
+            margin-bottom: 64px;
+        }
+
+        &__list {
+            width: 515px;
+            align-self: start;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        padding: 58px 0px 112px 0px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .contact {
+        padding: 45px 0px 100px 0px;
+
+        &__title {
+            font-size: 55px;
+        }
+        &__list {
+            width: 350px;
+            align-self: start;
+        }
+
+        &__form {
+            width: 350px;
+        }
+    }
+
+    .contact::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .contact {
+        padding: 32px 0px 88px 0px;
+
+        &__title {
+            @include siteTitle(40px, 40px, $white);
+            margin-bottom: 16px;
+        }
+
+        &__subtitle {
+            @include siteDesc(32px, 48px, $lightCoral);
+            margin-bottom: 40px;
+        }
+
+        &__list {
+            width: 327px;
+            text-align: left;
+        }
+
+        &_item {
+            text-align: left;
+        }
+
+        &__form {
+            width: 327px;
+        }
+    }
+
+    .contact::after {
+        @include beforAfter(100px, 100px)
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .contact {
+
+        &__list {
+            width:250px;
+        }
+
+        &__form {
+            width: 250px;
+        }
+    }
+}

@@ -55,6 +55,57 @@
     }
 }
 
+.menu-nav {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0px;
+    right: -100%;
+    width: 75%;
+    height: 100ch;
+    overflow-y: auto;
+    padding: 0 40px 20px 40px;
+    transition: 0.3s;
+    background-color: $policeBlue;
+    z-index: 999;
+}
+
+.menu-nav .header__list {
+    height: 100vh;
+    @include flexStyle(center, start, column);
+    position: absolute;
+    top: 112px;
+    left: 48px;
+    margin-left: 0px;
+    margin-bottom: 36px;
+}
+
+.menu-nav .header__item+.header__item {
+    margin-left: 0px;
+    margin-top: 24px;
+}
+
+.menu-nav .header__btn {
+    display: flex;
+    position: absolute;
+    top: 230px;
+}
+
+.menu-nav .header__clos {
+    position: absolute;
+    top: 56px;
+    right: 25px;
+    width: 17px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    background: url("../../Assets/Icon/close.svg") no-repeat
+}
+
+.header--open .menu-nav {
+    right: 0%;
+}
+
 // Responsiv Tablet
 
 @media only screen and (max-width: 768px) {
@@ -91,6 +142,7 @@
 @media only screen and (max-width: 368px) {
     .header {
         padding: 48px 0px;
+
         &__menu-btn {
             width: 20px;
             height: 20px;
