@@ -1,0 +1,82 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.some {
+    position: relative;
+    padding: 140px 0px;
+    background-color: $sacramentoStateGreen;
+    &__title {
+        @include siteTitle(48px, 48px, $white);
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    &__list {
+        @include flexStyle(center, center, none);
+    }
+
+    &__item + &__item {
+        margin-left: 80px;
+    }
+}
+
+.some::before {
+    @include beforAfter(200px, 100px,);
+    top: 0px;
+    left: 0px;
+    background: url("../../Assets/Icon/some-left-top.svg");
+}
+
+@media only screen and (max-width: 1285px) {
+    .some {
+        &__item + &__item {
+            margin-left: 49px;
+        }
+
+        &__img {
+            width: 103px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .some {
+        padding: 100px 0px;
+        &__title {
+            @include siteTitle(32px, 32px, $white);
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@media only screen and (max-width: 727px) {
+    .some {
+
+        &__list {
+            @include flexStyle(center, center, column);
+        }
+
+        &__item + &__item {
+            margin-left: 0px;
+            margin-top: 56px;
+        }
+
+        &__img {
+            width: 130px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .some {
+        padding: 88px 0px;
+        &__title {
+            margin-bottom: 62px;
+        }
+    }
+
+    .some::before {
+        display: none;
+    }
+}

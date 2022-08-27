@@ -1,0 +1,164 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.directors {
+    position: relative;
+    padding: 140px 0px;
+    background-color: $deepJungleGreen;
+
+    &__title {
+        @include siteTitle(48px, 48px, $white);
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 76px 30px;
+        align-items: stretch;
+    }
+
+    &__item {
+        position: relative;
+        padding: 32px 24px 56px 24px;
+        @include flexStyle(center, none, column);
+        width: 350px;
+        height: 250px;
+        background-color: $sacramentoStateGreen;
+    }
+
+    &__user-img {
+        margin-bottom: 13px;
+        border-radius: 50%;
+    }
+
+    &__user-name {
+        @include siteTitle(18px, 28px, $raptureBlue);
+    }
+
+    &__user-desc {
+        @include siteDesc(15px, 25px, $white);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 87%;
+        width: 56px;
+        height: 56px;
+        border: none;
+        border-radius: 50%;
+        background-color: $lightCoral;
+        background-image: url("../../Assets/Icon/Combined.svg");
+        background-size: 16px;
+        cursor: pointer;
+        transition: ease 0.5s;
+        background-repeat: no-repeat;
+        background-position: center, center;
+    }
+
+    &__btn:hover {
+        background-color: $raptureBlue;
+    }
+
+    &__btn.name {
+        z-index: 1;
+        transform: rotateZ(45deg);
+        background-color: $raptureBlue;
+    }
+
+    &__btn.name:hover {
+        background-color: $lightCoral;
+    }
+
+    &__btn.name+&__overlane {
+        opacity: 1;
+        height: 100%;
+    }
+
+    &__overlane {
+        position: absolute;
+        padding: 35px 24px 63px 24px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        color: #ffffff;
+        border-radius: 0px;
+        background: #002529;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    &__overlane-item {
+        @include flexStyle(center, none, column);
+        text-align: center;
+    }
+
+    &__overlane-header {
+        @include siteTitle(18px, 28px, $raptureBlue);
+        margin-bottom: 8px;
+    }
+
+    &__overlane-desc {
+        @include siteDesc(15px, 25px, $white);
+        margin-bottom: 24px;
+    }
+
+    &__overlane-link {
+        font-size: 24px;
+        color: $white;
+        transition: ease 0.5s;
+    }
+
+    &__overlane-link:hover {
+        color: $lightCoral;
+    }
+
+    &__overlane-link+&__overlane-link {
+        margin-left: 16px;
+    }
+}
+
+.directors::before {
+    @include beforAfter(100px, 200px);
+    top: 0px;
+    left: 0px;
+    background: url("../../Assets/Icon/disk-direk-1.svg") no-repeat
+}
+
+.directors::after {
+    @include beforAfter(147px, 100px);
+    right: 0px;
+    bottom: 0px;
+    background: url("../../Assets/Icon/directors-bg-right.svg") no-repeat
+}
+
+@media only screen and (max-width: 1145px) {
+    .directors {
+        &__list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .directors {
+        padding: 88px 0px 116px 0px;
+        &__list {
+            grid-gap: 52px 30px;
+        }
+
+        &__title {
+            @include siteTitle(32px, 32px, $white);
+            margin-bottom: 48px;
+        }
+    }
+
+    .directors::before {
+        @include beforAfter(100px, 200px);
+        top: -100px;
+    }
+}

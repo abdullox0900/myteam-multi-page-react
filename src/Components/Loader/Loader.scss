@@ -1,0 +1,38 @@
+// @import "../../Assets/Scss/style.scss";
+// @import "../../Assets/Scss/colors.scss";
+
+// /* code #6 */
+// .loading {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: absolute;
+//     height: 100vh;
+//     background-color: $darkGreen;
+// }
+
+// .load{
+//     width: 20%;
+//     height: 10px;
+//     background-color: rgba(82, 102, 89, 0.61);
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .load::after{
+//     content: '';
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgb(82, 102, 89);
+//     position: absolute;
+//     animation: load 2s linear 1;
+// }
+
+// @keyframes load{
+//     0%{
+//         width: 0;
+//     }
+//     100%{
+//         width: 100%;
+//     }
+// }

@@ -1,0 +1,84 @@
+@import "../../Assets/Scss/style.scss";
+@import "../../Assets/Scss/colors.scss";
+
+.about-con {
+    position: relative;
+    padding: 58px 0px 120px 0px;
+    background-color: $midnightGreen;
+    z-index: 10;
+    &__box {
+        @include flexStyle(start, space-between, none);
+    }
+
+    &__title {
+        @include siteTitle(64px, 64px, $white);
+    }
+
+    &__desc {
+        position: relative;
+        max-width: 730px;
+        @include siteDesc(18px, 28px, $white);
+    }
+
+    &__desc::before {
+        @include beforAfter(50px, 4px);
+        top: -40px;
+        background-color: $lightCoral;
+    }
+}
+
+.about-con::before {
+    @include beforAfter(100px,200px);
+    right: 0px;
+    bottom: 0px;
+    background: url("../../Assets/Icon/disk-red.svg") no-repeat
+}
+
+@media only screen and (max-width: 985px) {
+    .about-con {
+        &__desc {
+            max-width: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-con {
+
+        &__box {
+            @include flexStyle(center, none, column);
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__desc {
+            text-align: center;
+            max-width: 457px;
+        }
+
+        &__desc::before {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .about-con {
+        padding: 32px 0px 108px 0px;
+        
+        &__title {
+            @include siteTitle(48px, 48px, $white);
+            margin-bottom: 24px;
+        }
+
+        &__desc {
+            max-width: 327px;
+        }
+    }
+
+    .about-con::before {
+        @include beforAfter(100px,100px);
+    }
+}

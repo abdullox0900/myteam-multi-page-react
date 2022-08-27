@@ -15,15 +15,15 @@ function Footer() {
                     <div className="footer__content">
                         <div className="footer__left">
                             <div className="footer__wrap">
-                                <a className="footer__logo-link">
+                                <Link to={"/"} className="footer__logo-link">
                                     <img className="footer__logo-img" src={Logo} alt="logo-img" width={160} height={40} />
-                                </a>
+                                </Link>
                                 <ul className="footer__list">
                                     <li className="footer__item">
-                                        <a to={"/home"} className="footer__link">Home</a>
+                                        <Link to={"/"} className="footer__link">Home</Link>
                                     </li>
                                     <li className="footer__item">
-                                        <a to={"/about"} className="footer__link">About</a>
+                                        <Link to={"/about"} className="footer__link">About</Link>
                                     </li>
                                 </ul>
                             </div>

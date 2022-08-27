@@ -40,10 +40,12 @@ function Teams() {
                                 teamNewArr.map((data) => {
                                     return (
                                         <>
-                                            <li className="teams__item">
-                                                <img className="teams__icon" src={data.img} alt="ils-icon" width={72} height={72} />
+                                            <li className="teams__item" >
+                                                <img data-aos="zoom-in" className="teams__icon" src={data.img} alt="ils-icon" width={72} height={72} />
 
-                                                <div className="team__wrap">
+                                                <div className="team__wrap" data-aos="fade-left"
+                                                    data-aos-offset="300"
+                                                    data-aos-easing="ease-in-sine">
                                                     <h5 className="teams__item-title">{data.title}</h5>
                                                     <p className="teams__item-desc">{data.desc}</p>
                                                 </div>

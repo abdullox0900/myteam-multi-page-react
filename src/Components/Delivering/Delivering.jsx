@@ -50,10 +50,10 @@ function Delivering() {
                                     return (
                                         <>
                                             <li className="delivering__item" key={data.id}>
-                                                <p className="delivering__item-desc">{data.desc}</p>
-                                                <h6 className="delivering__user-name">{data.name}</h6>
-                                                <blockquote className="delivering__blockquote">{data.blockquote}</blockquote>
-                                                <img className="delivering__user-img" src={data.img} alt="img" width={62} height={62} />
+                                                <p data-aos="zoom-in-up" className="delivering__item-desc">{data.desc}</p>
+                                                <h6 data-aos="zoom-in-down" className="delivering__user-name">{data.name}</h6>
+                                                <blockquote data-aos="zoom-in-down" className="delivering__blockquote">{data.blockquote}</blockquote>
+                                                <img data-aos="zoom-in" className="delivering__user-img" src={data.img} alt="img" width={62} height={62} />
                                             </li>
                                         </>
                                     )
